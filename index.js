@@ -1,7 +1,7 @@
 const { Client, GatewayIntentBits, SlashCommandBuilder, Routes, REST } = require("discord.js");
 
 const token = process.env.DISCORD_TOKEN;
-const clientId = "YOUR_BOT_CLIENT_ID"; // from Discord Developer Portal
+const clientId = 1478734611319230474; // from Discord Developer Portal
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds]
