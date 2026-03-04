@@ -1,5 +1,5 @@
 const { Client, GatewayIntentBits, SlashCommandBuilder, Routes, REST } = require("discord.js");
-
+const guildId = "1247512602897027132";
 const token = process.env.DISCORD_TOKEN;
 const clientId = "1478734611319230474"; // from Discord Developer Portal
 
@@ -22,9 +22,9 @@ client.once("ready", async () => {
 
   try {
     await rest.put(
-      Routes.applicationCommands(clientId),
-      { body: commands }
-    );
+  Routes.applicationGuildCommands(clientId, guildId),
+  { body: commands }
+);
     console.log("Slash command registered");
   } catch (error) {
     console.error(error);
